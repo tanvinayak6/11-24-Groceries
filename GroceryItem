@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+public class GroceryItem
+{
+  String itemname;
+  int itemquantity;
+  double pricePerItem;
+  public GroceryItem()
+  {
+  }
+  public GroceryItem(String name, int quantity, double pricePerUnit)
+  {
+   itemname=name;
+   itemquantity=quantity;
+   pricePerItem=pricePerUnit;
+  }
+  public double getCost()
+  {
+    return itemquantity*pricePerItem;
+  }
+  public void setQuantity(int quantity)
+  {
+    itemquantity=quantity;
+  }
+  public String toString()
+  {
+    return itemquantity+" " +itemname+ "@ "+pricePerItem+"= "+pricePerItem*itemquantity;
+  }
+}
+  
