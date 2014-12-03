@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+public class GroceryList
+{
+  ArrayList<GroceryItem> list= new ArrayList<GroceryItem>();
+  GroceryItem item1= new GroceryItem();
+  public GroceryList()
+  {
+    GroceryItem item= new GroceryItem();
+    list.add(item);
+  }
+  public void add (GroceryItem item)
+  {
+    list.add(item);
+  }
+  public double getTotalCost()
+  {
+    double temp=0.0;
+    for(int i=0; i<list.size(); i++)
+    {
+      double cost=(list.get(i)).getCost();
+      temp=cost+temp;
+    }
+    return temp;
+  }
+  public String toString()
+  {
+    return item1.itemquantity+" " +item1.itemname+ "@ "+item1.pricePerItem+"= "+item1.pricePerItem*item1.itemquantity+"/n";
+  }
+  }
